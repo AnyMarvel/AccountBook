@@ -33,7 +33,7 @@ import com.github.airsaid.accountbook.util.RegexUtils;
 import com.github.airsaid.accountbook.util.ToastUtils;
 import com.github.airsaid.accountbook.util.UiUtils;
 import com.github.airsaid.accountbook.util.UserUtils;
-import com.tencent.bugly.crashreport.CrashReport;
+//import com.tencent.bugly.crashreport.CrashReport;
 
 import java.util.List;
 
@@ -120,7 +120,7 @@ public class LoginFragment extends BaseFragment implements LoginContract.View, V
         final User user = UserUtils.getUser();
         String objectId = user.getObjectId();
         createDefaultType(objectId);
-        CrashReport.setUserId(objectId);
+//        CrashReport.setUserId(objectId);
         final AccountRepository repository = new AccountRepository();
         repository.queryDefaultBook(user, new AccountDataSource.QueryDefaultBookCallback() {
             @Override

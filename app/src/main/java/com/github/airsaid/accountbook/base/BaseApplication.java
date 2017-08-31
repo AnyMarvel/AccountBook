@@ -14,7 +14,7 @@ import com.github.airsaid.accountbook.data.AccountBook;
 import com.github.airsaid.accountbook.data.DaoMaster;
 import com.github.airsaid.accountbook.data.DaoSession;
 import com.github.airsaid.accountbook.data.Msg;
-import com.tencent.bugly.Bugly;
+//import com.tencent.bugly.Bugly;
 
 import org.greenrobot.greendao.database.Database;
 
@@ -47,7 +47,7 @@ public class BaseApplication extends Application{
         initGreenDao();
         registSubClass();
         initLeancloud();
-        initCrashReport();
+//        initCrashReport();
     }
 
     /**
@@ -106,16 +106,16 @@ public class BaseApplication extends Application{
     /**
      * 初始化 Bugly
      */
-    private void initCrashReport() {
-        try {
-            ApplicationInfo appInfo = getPackageManager().getApplicationInfo(getPackageName(),
-                    PackageManager.GET_META_DATA);
-            String appId = appInfo.metaData.getString("BUGLY_APPID");
-            Bugly.init(getContext(), appId, BuildConfig.DEBUG);
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
+//    private void initCrashReport() {
+//        try {
+//            ApplicationInfo appInfo = getPackageManager().getApplicationInfo(getPackageName(),
+//                    PackageManager.GET_META_DATA);
+//            String appId = appInfo.metaData.getString("BUGLY_APPID");
+//            Bugly.init(getContext(), appId, BuildConfig.DEBUG);
+//        } catch (PackageManager.NameNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     /**
      * 获取上下文
